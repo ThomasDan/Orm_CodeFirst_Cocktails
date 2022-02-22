@@ -1,0 +1,30 @@
+Cocktail:
+	Liquids
+	Misc
+
+RECEPTACLE
+	Name
+	Capacity
+
+COCKTAIL
+	Name
+	Description
+	RECEPTACLE FK
+
+COCKTAIL_INGREDIENT
+	COCKTAIL FK
+	INGREDIENT FK
+	Quantity
+
+INGREDIENT (ABSTRACT) IUnitTyped
+	IngredientId
+	Name
+
+MISC : INGREDIENT
+	UNITTYPE FK
+
+ALCOHOL : INGREDIENT // Unit type is always ML
+	Percentage
+
+UNITTYPE
+	Type
