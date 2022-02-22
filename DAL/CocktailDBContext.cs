@@ -160,6 +160,15 @@ namespace Orm_CodeFirst_Cocktails.DAL
 
         public DbSet<Cocktail_Ingredient> Cocktail_Ingredients { get; set; }
 
+        internal void KillCocktail(Cocktail cocktail)
+        {
+            using (var ctx = new CocktailDBContext())
+            {
+                ctx.Cocktails.Remove(cocktail);
+                ctx.SaveChanges();
+            }
+        }
+
         internal List<Cocktail> FullCocktails()
         {
             List<Cocktail> temp;
