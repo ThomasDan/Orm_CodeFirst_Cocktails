@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Orm_CodeFirst_Cocktails.logic;
 
 namespace Orm_CodeFirst_Cocktails
 {
@@ -10,6 +11,7 @@ namespace Orm_CodeFirst_Cocktails
     {
         static void Main(string[] args)
         {
+            Repeater.Run();
         }
     }
 }
